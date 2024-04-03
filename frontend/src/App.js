@@ -1,12 +1,19 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { SignIn } from "./Pages/SignInPage/SignIn"
-export default function App() {
+import {BrowserRouter, Routes, Route} from "react-router-dom"
+import { SignInPageStudent } from "./Pages/SignInPageStudent";
+import { SignInPageLecturer } from "./Pages/SignInPageLecturer";
+
+function App() {
   return (
-    <Router>
-    <Routes>
-        <Route path="/" element={<SignIn/>}/>
-      </Routes>
-    </Router>
+    <div className="App">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<SignInPageStudent/>}/>
+          <Route path="/signInLec" element={<SignInPageLecturer/>}/>
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
+
+export default App;

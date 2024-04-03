@@ -5,10 +5,12 @@ module.exports = {
   ],
   theme: {
     extend: {
-     
-  },},
-  plugins: {
-    tailwindcss: {},
-    autoprefixer: {},
+      backgroundImage:{
+        'bg1': "url('./image/background1.png')"
+      }
+    },
   },
+  plugins: [
+    require('@tailwindcss/forms'),
+  ],
 }
